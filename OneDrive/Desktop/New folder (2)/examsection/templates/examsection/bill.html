@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+    background-color: #FFFACD;
+    height:1100px;
+}
+
+
+
+.container {
+   
+    width:100%;
+}
+
+
+input {
+    width:450px;
+    height:40px;
+    outline:none;
+    border-radius:5px;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+    border-bottom-width:2px;
+
+}
+
+
+.block-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom:20px;
+    margin-top:30px;
+}
+
+.block-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom:20px;
+}
+
+.block-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom:20px;
+}
+
+.block-4 {
+    text-align: center;
+}
+
+.input-group-text {
+    width:180px;
+}
+
+.extra {
+    width:450px;
+
+}
+
+
+
+
+
+
+@media screen and (max-width:740px) {
+    .container {
+        width:100%;
+        
+    }
+
+    input{
+        width:370px;
+    }
+
+    .input-group-text {
+        width:156px;
+    }
+
+    .block-3 {
+        display:none;
+    }
+    
+ 
+}
+
+@media screen and (min-width:740px) {
+    .block-3-dissappear {
+        display:none;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+    
+    {% load crispy_forms_tags %}
+
+    <div class="container">
+        
+    <a href="{% url 'remuneration' %}">Back</a>
+
+    <form action="" method="POST">
+
+    {% csrf_token %}
+
+    <div class="block-2">
+
+        <div class="input-box extra"><span class="details">{{form.nature_of_work|as_crispy_field}}</span> </div>
+
+        <div class="input-box"><span class="details">No. of Sets / Papers: </span> <br> <input type="number" name="papers" value="0"> </div>
+
+        <div class="input-box"><span class="details">Rate: </span> <br> <input type="number" name="rate" value="0"> </div>
+
+      <!-- "extra" class is used to change the width of django based forms like branch ,designation,nature of work-->
+
+    </div>
+
+    
+
+
+    <div class="block-3">
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">No of Days of D.A</span>
+            </div>
+            <input type="number" name="dadays" value="0" class="form-control">
+            <div class="input-group-prepend">
+                <span class="input-group-text">TA For both sides</span>
+              </div>
+            <input type="text" aria-label="Last name" name="tarate" class="form-control">
+        </div>
+        
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">D.A per Day</span>
+            </div>
+            <input type="number" name="darate" value="0" class="form-control">
+            <div class="input-group-prepend">
+                <span class="input-group-text">No of Days</span>
+              </div>
+            <input type="number" name="tadays" value="0" class="form-control">
+          </div>                      
+        
+
+        
+        </div>
+
+
+    </div>
+
+    <div class="block-4"> 
+        <button type="submit" class="btn btn-outline-info btn-lg"> Submit  </button></div>
+
+    </form>
+    
+</body>
+</html>

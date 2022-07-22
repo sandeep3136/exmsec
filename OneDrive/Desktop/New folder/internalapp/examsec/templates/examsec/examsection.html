@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        h1, h3 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+            margin-top:280px;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url("{% static 'examsec/images/bg-img.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Bonam Venkata Chalamayya Engineering College(Autonomous):: Odalarevu</h1>
+    <h3>Autonomous Examination Section</h3>
+    <!-- <img src="{% static 'examsection/images/bg-img.jpg' %}" alt=""> -->
+    <div>
+        <a href="{% url 'remuneration' %}"><button type="button" class="btn btn-info btn-lg">Admin</button></a>
+
+        <a href="{% url 'details' %}"><button type="button" class="btn btn-outline-info btn-lg">Click here to fill Remuneration form</button></a> 
+    </div>
+</body>
+</html>

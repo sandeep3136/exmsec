@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Generate Bill</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12px;
+        }
+    
+
+        .mytable{
+            border:1px solid black;
+            height:35px;
+            font-size: 15px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .data {
+            text-align: left;
+            font-size: 15px;
+            padding-bottom: 3px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">BONAM VEKATA CHALAMAYYA ENGINEERING COLLEGE(A):: ODALAREVU - 533210</h1>
+    <h2 style="text-align: center;">EXAM SECTION (AUTONOMOUS)</h2>
+    <h2 style="text-align: center;">Remuneration, TA&DA BILL</h2>
+    <p style="font-size: 15px;"><b>Name of the Examination:</b> {{name_of_exam}}</p>
+
+    <table cellspacing="0" border-spacing: "0 1em">
+        <tr style="font-size: 15px;">
+            <td class="data">
+            <p><b>Name of the Subject:</b> {{name_of_sub}}</p>
+            </td>
+            <td class="data">
+            <p><b>Branch:</b> {{branch}}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="data">
+                <p><b>Name of the Staff:</b> {{name_of_staff}}</p>
+            </td>
+            <td class="data">
+                <p><b>Cell No:</b> {{mobile}}</p>    
+            </td>
+        </tr>
+     
+        <tr>
+            <td class="data">
+                <p><b>Designation:</b> {{des}}</p>
+            </td>
+            <td class="data">
+                <p><b>Name of the College:</b> {{name_of_clg}}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="data">
+                <p><b>Name of the Bank:</b> {{name_of_bank}}</p>
+            </td>
+            <td class="data">
+                <p><b>Location:</b> {{bank_loc}}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="data">
+                <p><b>IFSC Code:</b> {{ifsc}}</p>            
+            </td>
+            <td class="data">
+                <p><b>A/C No:</b> {{accno}}</p>
+            </td>
+        </tr>
+
+    </table>
+    
+    <h2 style="text-align: center; background-color: black; color: white; padding-top: 5px;">Remuneration</h2> 
+    
+    
+    <table class="mytable"> 
+        <tr bgcolor="grey" style="color: white;">
+            <th>Nature of Work</th>
+            <th>Number of Papers</th>
+            <th>Rate (Rs)</th>
+            <th>Total (Rs)</th>
+        </tr>
+        <tr>
+            <td>{{nature_of_work}}</td>
+            <td>{{number_of_papers}}</td>
+            <td>{{rate}}</td>
+            <td>{{rem_total}}</td>
+        </tr>
+    </table>
+
+    <h2 style="text-align: center; background-color: black; color: white; padding-top: 5px;">TA/DA</h2>
+    <table class="mytable">
+        <tr>
+            <td bgcolor="grey" style="color: white;">No.of Days of D.A</td>
+            <td>{{da_days}}</td>
+            <td bgcolor="grey" style="color: white;">TA for both sides</td>
+            <td>{{ta_days}}</td>
+        </tr>
+        <tr>
+            <td bgcolor="grey" style="color: white;">D.A per day</td>
+            <td>{{da_rate}}</td>
+            <td bgcolor="grey" style="color: white;">No of days</td>
+            <td>{{ta_rate}}</td>
+        </tr>
+        <tr>
+            <td bgcolor="grey" style="color: white;">D.A Amount(Rs)</td>
+            <td>{{da_amt}}</td>
+            <td bgcolor="grey" style="color: white;">TA Amount</td>
+            <td>{{ta_amt}}</td>
+        </tr>
+        
+    </table>
+
+
+    <div class="txt" style="font-size: 15px;">
+        <p>Grand Total (Remuneration+TA+DA) = <b>{{grand_total}}</b>  Rs</p>
+        <p>In words Rupees {{in_words}} only</p>
+
+        <p>I certify that the work assigned is completed and this bill is not claimed earlier from any source</p>
+        <p>Station:</p>
+        <p>Date:</p>
+        <p>Signature:</p>
+
+    </div>
+
+    
+    <hr>
+    <div class="offc-txt" style="font-size: 15px;">
+
+        <p style="text-align: center;"> <b> FOR OFFICE USE </b></p>
+        <p>This bill is passed for Rs (Rupees): <b>{{grand_total}}</b> </p>
+        <br>
+        <br>
+        <table cellspacing="0" border-spacing: "0 1em">
+            <tr>
+               <td>
+                <p>Clerk</p>
+               </td> 
+               <td>
+                <p>Deputy Controller of Examinations</p>
+               </td>
+               <td>
+                <p>Controller Of Examinations</p>
+               </td>
+        
+            </tr>
+        </table>
+        
+
+  
+    </div>
+    
+
+</body>
+</html>

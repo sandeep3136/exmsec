@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .to {
+            font-size: 14px;
+            line-height:  0.1;
+        }
+
+        .mytable {
+            border:1px solid black;
+            height:35px;
+            font-size: 15px;
+        }
+
+        .txt {
+            font-size: 15px;
+        }
+
+        td  {
+            text-align: center;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .foot {
+            text-align: right;
+        }
+
+        .heading {
+            text-align: center;
+            line-height: 0.1;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <img src="{% static 'examsection/images/logo.jpg' %}" alt="img">
+
+    <div class="heading">
+
+    <h1>BONAM VENKATA CHALAMAYYA ENGINEERING COLLEGE</h1>
+    <h2>(AUTONOMOUS)</h2>
+    <h3>(Approved by AICTE, Permanently Affiliated to JNTUK, Kakinada</h3>
+    <h3>Accredited by NAAC with 'A' Grade)</h3>
+    <h3>Odalarevu - 533210, East Godavari, AndhraPradesh</h3>
+</div>
+
+<br>
+<br>
+   
+    <div class="from" style="line-height: 0;">
+
+        <table >
+
+            <tr style="text-align: left;">
+                <td style="text-align: left;">
+                    <h3 style="font-size: 15px;">Dr. Chandra Mouli V S A</h3> 
+                    <p style="font-size: 12px;">MTech, Ph.D</p>
+                    <p style="font-size: 12px;">Principal</p>
+                </td>
+
+                <td>
+                    
+                    <p style="font-size: 15px;">Dt.{{today}} </p>
+
+                </td>
+            </tr>
+        </table>
+
+        
+
+    </div>
+    
+    <p style="text-align: center; font-size: 15px;">Relieving Letter</p>
+
+    <div class="to" >
+        <p>To</p>
+        <p>The Principal,</p>
+        <p>{{name_of_clg}}</p>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="txt">
+        <p>Dear Sir/Madam,</p>
+        <b><p>Sub: Relieving Order for Spot Valuation - Reg</p></b>
+        <p>Ref: - Your Mail Communication Dated: </p>
+
+        <p style="text-align: center;"> ******</p>
+
+        <p>I wish to inform you that the following faculty at our college will be relieved of their duties at 4.30 p.m on {{today1}} from Spot Valuation.</p>
+    
+    </div>
+    
+    
+    <table class="mytable">
+        <tr>
+            <th>Date</th>
+            <th>Branch</th>
+            <th>Subject</th>
+            <th>Faculty Name</th>
+            <th>Designation</th>
+            <th>Mobile Number</th>
+        </tr>
+
+        <tr>
+            <td>{{today}}</td>
+            <td>{{branch}}</td>
+            <td>{{name_of_sub}}</td>
+            <td>{{name_of_staff}}</td>
+            <td>{{des}}</td>
+            <td>{{mobile}}</td>
+        </tr>
+        
+    </table>
+
+    <div style="font-size: 15px;">
+
+    <p>He/She was relieved of his duties at 4.30 PM on {{today}}</p>
+    <p>Thanking you sir.</p>
+
+    <p class="foot">Yours Sincerely</p>
+    <p class="foot">PRINCIPAL</p>
+
+</div>
+</body>
+</html>
